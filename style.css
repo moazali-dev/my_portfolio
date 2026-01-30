@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: direct;
+}
+
+.bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+    background: rgba(255,255,255,0.8);
+    border-bottom: 1px solid #ddd;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+#navbar nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    margin-left: 25px;
+    position: relative;
+}
+
+#navbar nav a::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: blue;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+#navbar nav a:hover::after,
+#navbar nav a.active::after {
+    width: 100%;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 192px 100px;
+    color: black;
+}
+
+.info h1 {
+    font-size: 42px;
+    line-height: 1.3;
+    animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px);}
+    100% { opacity: 1; transform: translateY(0);}
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 25px;
+    border-radius: 25px;
+    background: rgb(37, 40, 141);
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.hero-img img {
+    width: 320px;
+    border-radius: 50%;
+    padding: 15px;
+    margin-right: 200px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-img img:hover {
+    transform: scale(1.05) rotate(2deg);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.socials {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.socials a {
+    width: 45px;
+    height: 45px;
+    background: black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.socials a:hover {
+    transform: scale(1.2);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+}
+
+.fa-linkedin-in { color: #0a66c2; }
+.fa-github { color: white; }
+.fa-twitter { color: #1da1f2; }
+.fa-instagram { color: #e1306c; }
+
+section {
+    padding: 250px 100px;
+    font-size: 20px;
+    text-align: justify;
+    position: relative;
+    color: white;
+}
+
+.bg-sec {
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-sec::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3));
+    z-index: 0;
+}
+
+.bg-sec h2, .bg-sec p {
+    position: relative;
+    z-index: 1;
+}
+
+.about { background-image: url('images/about.jpg'); }
+.skills { background-image: url('images/img4.jpg'); }
+.education { background-image: url('images/img5.jpg'); }
+.contact { background-image: url('images/img6.jpg'); }
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 150px 20px;
+    }
+    .hero-img img {
+        margin-right: 0;
+        width: 200px;
+    }
+    section {
+        padding: 120px 20px;
+        font-size: 16px;
+    }
+    #navbar nav {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+    .socials {
+        justify-content: center;
+    }
+    .socials a { width: 40px; height: 40px; font-size: 18px; }
+}
+
+
+
+.about {
+  text-align: left;
+  line-height: 1.6;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+
+
+

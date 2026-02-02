@@ -1,104 +1,362 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Moaz Ali Portfolio</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    
+    <meta name="description"
+        content="Moaz Ali - Frontend Developer specializing in responsive, modern web interfaces. Portfolio showcasing skills in HTML, CSS, JavaScript, and Data Science.">
+    <title>Moaz Ali | Frontend Developer Portfolio</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-    
+
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
 </head>
-<body>
 
+<body>
+    <!-- Navbar -->
     <header id="navbar">
-        <h2 class="logo">Moaz Ali</h2>
-        <nav>
-            <a class="active" href="#home">Home</a>
+        <h2 class="logo">Moaz<span class="logo-accent">Ali</span></h2>
+        <nav class="nav-links" id="navLinks">
+            <a href="#home" class="active">Home</a>
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
             <a href="#education">Education</a>
             <a href="#contact">Contact</a>
         </nav>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </header>
 
+    <!-- Hero Section -->
     <section class="hero" id="home">
-        <div class="info">
-            <h1>
-                Hi There,<br />
-                I'm Moaz Ali<br />
-                I'm into Frontend Development
-            </h1>
-            <a href="#about" class="btn">About Me</a>
-            <div class="socials">
-                <a href="https://www.linkedin.com/in/moaz-ali-313b68255/" target="_blank">
+        <div class="hero-content">
+            <div class="info">
+                <p class="greeting">Welcome to my portfolio</p>
+                <h1 class="hero-title">
+                    Hi There <span class="wave">👋</span><br />
+                    I'm <span class="name-highlight">Moaz Ali</span>
+                </h1>
+                <p class="hero-subtitle">Frontend Developer | Data Science Student</p>
+                <p class="hero-description">
+                    Passionate about creating beautiful, responsive web experiences that make a difference.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                    <a href="#about" class="btn btn-secondary">Learn More</a>
+                </div>
+                <div class="socials">
+                    <a href="https://www.linkedin.com/in/moaz-ali-313b68255/" target="_blank" rel="noopener noreferrer"
+                        aria-label="LinkedIn Profile">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/moazali-dev" target="_blank" rel="noopener noreferrer"
+                        aria-label="GitHub Profile">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" aria-label="Twitter Profile">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" aria-label="Instagram Profile">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-img">
+                <div class="img-wrapper">
+                    <img src="images/hero.jpg" alt="Moaz Ali - Frontend Developer">
+                    <div class="img-border"></div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <a href="#about" aria-label="Scroll to about section">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Background -->
+    <img src="images/b.jpg" class="bg" alt="" role="presentation">
+
+    <!-- About Section -->
+    <section id="about" class="about section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Get to know me</span>
+                <h2 class="section-title">About Me</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-intro">
+                        Hi! I'm <strong>Moaz Ali</strong>, a passionate Frontend Developer focused on creating
+                        responsive, modern, and user-friendly web interfaces.
+                    </p>
+                    <p>
+                        Currently pursuing a Bachelor's degree in Data Science, I combine my technical skills
+                        with creative design thinking to build engaging digital experiences. I'm constantly
+                        learning and exploring new technologies to enhance my craft.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <i class="fas fa-code"></i>
+                            <h3>10+</h3>
+                            <p>Projects Completed</p>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-coffee"></i>
+                            <h3>100+</h3>
+                            <p>Cups of Coffee</p>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-lightbulb"></i>
+                            <h3>∞</h3>
+                            <p>Ideas Generated</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">What I do</span>
+                <h2 class="section-title">Skills & Expertise</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Frontend Development</h3>
+                    <p>Building responsive and interactive user interfaces</p>
+                    <div class="skill-tags">
+                        <span class="tag">HTML5</span>
+                        <span class="tag">CSS3</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Database Management</h3>
+                    <p>Designing and managing robust database systems</p>
+                    <div class="skill-tags">
+                        <span class="tag">SQL</span>
+                        <span class="tag">PostgreSQL</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>AI & Machine Learning</h3>
+                    <p>Implementing intelligent solutions and models</p>
+                    <div class="skill-tags">
+                        <span class="tag">Machine Learning</span>
+                        <span class="tag">YOLO</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Development Tools</h3>
+                    <p>Version control and development workflows</p>
+                    <div class="skill-tags">
+                        <span class="tag">Git</span>
+                        <span class="tag">GitHub</span>
+                        <span class="tag">Python</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">My Journey</span>
+                <h2 class="section-title">Education</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="education-content">
+                <div class="education-card">
+                    <div class="education-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="education-details">
+                        <h3>Bachelor's in Data Science</h3>
+                        <p class="institution">
+                            <i class="fas fa-university"></i>
+                            KFUEIT, Rahim Yar Khan
+                        </p>
+                        <p class="description">
+                            Studying data science with a focus on machine learning, statistical analysis,
+                            and web development. Building a strong foundation in both theoretical concepts
+                            and practical applications.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Let's connect</span>
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="contact-content">
+                <p class="contact-intro">
+                    I'm always open to discussing new projects, creative ideas, or opportunities to be part of your
+                    vision.
+                </p>
+                <div class="contact-methods">
+                    <a href="mailto:moazali916@gmail.com" class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email</h3>
+                        <p>moazali916@gmail.com</p>
+                    </a>
+                    <a href="https://www.linkedin.com/in/moaz-ali-313b68255/" target="_blank" rel="noopener noreferrer"
+                        class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </div>
+                        <h3>LinkedIn</h3>
+                        <p>Connect with me</p>
+                    </a>
+                    <a href="https://github.com/moazali-dev" target="_blank" rel="noopener noreferrer"
+                        class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <h3>GitHub</h3>
+                        <p>Check my projects</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Moaz Ali. Built with passion and dedication.</p>
+            <div class="footer-socials">
+                <a href="https://www.linkedin.com/in/moaz-ali-313b68255/" target="_blank" rel="noopener noreferrer"
+                    aria-label="LinkedIn">
                     <i class="fab fa-linkedin-in"></i>
                 </a>
-                <a href="https://github.com/moazali-dev" target="_blank">
+                <a href="https://github.com/moazali-dev" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                     <i class="fab fa-github"></i>
-                </a>
-                <a href="https://twitter.com" target="_blank">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="https://instagram.com" target="_blank">
-                    <i class="fab fa-instagram"></i>
                 </a>
             </div>
         </div>
+    </footer>
 
-        <div class="hero-img">
-            <img src="images/hero.jpg" alt="Portrait of Moaz Ali" />
-        </div>
-    </section>
+    <!-- Scripts -->
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
 
-    <img src="images/b.jpg" alt="background" class="bg" />
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        });
 
-    <section id="about" class="about bg-sec">
-        <h2>About</h2>
-        
-    <p>
-        Hi! I'm Moaz Ali, a passionate Frontend Developer dedicated to creating visually appealing and user-friendly web applications.  
-        I specialize in HTML, CSS, JavaScript, and React, and I enjoy bringing ideas to life with clean, responsive designs.  
-        I thrive on learning new technologies, solving complex problems, and continuously improving my skills.  
-        Beyond coding, I am curious about UI/UX design, AI/ML, and emerging web trends, which help me build modern and efficient solutions.  
-        My goal is to deliver web experiences that are not only functional but also enjoyable for users.
-    </p>
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                menuToggle.classList.remove('active');
+            });
+        });
 
-    </section>
+        // Active navbar on scroll
+        const sections = document.querySelectorAll("section");
+        const navItems = document.querySelectorAll(".nav-links a");
 
-    <section id="skills" class="skills bg-sec">
-        <h2>Skills</h2>
-        <p>
-            <strong>Frontend:</strong> HTML, CSS, JavaScript <br>
-            <strong>Databases:</strong> SQL, PostgreSQL <br>
-            <strong>AI/ML:</strong> Machine Learning, Deep Learning, YOLO <br>
-            <strong>Languages & Tools:</strong> Python, Streamlit, Git & GitHub
-        </p>
-    </section>
+        window.addEventListener("scroll", () => {
+            let current = "";
 
-    <section id="education" class="education bg-sec">
-        <h2>Education</h2>
-        <p>
-            <strong>Bachelor’s in Data Science</strong><br>
-            Khwaja Fareed University of Information and Technology, Rahim Yar Khan<br><br>
-            <strong>Intermediate (FSc ICS)</strong><br>
-            Khwaja Fareed College, Rahim Yar Khan<br>
-            
-        </p>
-    </section>
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= sectionTop - 150) {
+                    current = section.getAttribute("id");
+                }
+            });
 
-    <section id="contact" class="contact bg-sec">
-        <h2>Contact</h2>
-        <h3>Feel free to contact me at:<h3>
+            navItems.forEach(link => {
+                link.classList.remove("active");
+                if (link.getAttribute("href") === "#" + current) {
+                    link.classList.add("active");
+                }
+            });
 
-        <p>
-            <a href="mailto:moazali916@email.com">moazali916@gmail.com</a><br>
-            <a href="https://www.linkedin.com/in/moaz-ali-313b68255/">Linkedin</a><br>
+            // Navbar background on scroll
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
 
-        </p>
-    </section>
+        // Smooth scroll for all anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
 
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.skill-card, .stat-item, .education-card, .contact-card').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
 </body>
+
 </html>
